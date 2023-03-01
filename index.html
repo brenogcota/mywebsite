@@ -4,81 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cambay&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
     <title>Fortunite Store</title>
+    <link rel="stylesheet" href="./public/reset.css">
+    <link rel="stylesheet" href="./public/style.css">
 </head>
-<body>
+<body class="page">
 
-    <header>
-        <a href="/">
+    <header class="page_header">
+        <a href="/" class="page_logo">
             Cozy®
         </a>
 
-        <nav>
-            <a href="">SHOP</a>
-            <a href="">COLLECTIVE</a>
-            <a href="">DESIGNERS</a>
-            <a href="">ABOUT US</a>
-            <a href="">CONTACT</a>
+        <nav class="header_navbar">
+            <a class="header_navbar--category" href="">SHOP</a>
+            <a class="header_navbar--category" href="">COLLECTIVE</a>
+            <a class="header_navbar--category" href="">DESIGNERS</a>
+            <a class="header_navbar--category" href="">ABOUT US</a>
+            <a class="header_navbar--category" href="">CONTACT</a>
         </nav>
+
+        <ul class="header_right">
+            <li class="header_right--item"><img src="./assets/icons/menu.svg" alt=""></li>
+            <li class="header_right--item"><img src="./assets/icons/search.svg" alt=""></li>
+            <li class="header_right--item cart"><img src="./assets/icons/cart.svg" alt=""></li>        
+        </ul>
     </header>
 
-    <section>
-        <div>
-            <div>
-                Chairs / Meryl Lounge Chair
+    <section class="main_section">
+        <div class="container container_left">
+
+            <div class="page_back">
+                <img src="./assets/icons/arrow.svg" alt="">
+            </div>
+
+            <div class="breadcrumb">
+                Chairs / <strong class="active">Meryl Lounge Chair</strong>
             </div>
     
-            <div>
+            <div class="product_details"> 
                 <div>
-                    <h1>Meryl Lounge Chair</h1>
+                    <h1 class="product_name">Meryl Lounge Chair</h1>
                 </div>
-                <div>
-                    <strong>$149.99</strong>
-                    <span>4.6 / 5.0 (556)</span>
+                <div class="product_price-and-rating">
+                    <strong class="product_price">$149.99</strong>
+                    <div class="product_rating">
+                        <img src="./assets//icons/Stars.png"/>
+                        <span>4.6 / 5.0 (556)</span>
+                    </div>
                 </div>
     
-                <div>
+                <div class="product_description">
                     <p>The gently curved lines accentuated by sewn details are kind to your body and pleasant to look at. Also, there’s a tilt and height-adjusting mechanism that’s built to outlast years of ups and downs.</p>
                 </div>
     
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="product_colors">
+                    <div class="product_color bege"></div>
+                    <div class="product_color blue"></div>
+                    <div class="product_color gray"></div>
+                    <div class="product_color pink"></div>
                 </div>
     
-                <div>
-                    <div>
+                <div class="product_buyarea">
+                    <div class="product_quantity-selector">
+                        <img src="./assets/icons/minus.svg" alt="">
                         <input type="number" name="" id="" placeholder="" value="1">
+                        <img src="./assets/icons/max.svg" alt="">
                     </div>
-                    <div>
-                        <button>Add to Cart</button>
-                    </div>
+                    
+                    <button class="product_buy-button">Add to Cart</button>
                 </div>
     
-                <div>
+                <div class="product_trial">
                     <span>Free 3-5 day shipping  •  Tool-free assembly  •  30-day trial</span>
                 </div>
     
-                <div>
-                    <button>Add to Wishlist</button>
+                <div class="product_wishlist">
+                    <img src="./assets/icons/wishlist.svg" />
+                    <button class="product_add-to-wishlist">Add to Wishlist</button>
                 </div>
             </div>
         </div>
 
-        <div>
-            <div>
-                <img src="./assets/images/Product Image.png" />
+        <div class="container container_right">
+            <div class="product_images-count">
+                <strong>01</strong>
+                <span>/ 05</span>
+            </div>
+            <div class="product-image--container">
+                <img class="product-image" src="./assets/images/Product Image.png" />
             </div>
 
-            <div>
-                <img src="./assets/images/img1.png" alt="">
-                <img src="./assets/images/img2.png" alt="">
-                <img src="./assets/images/img3.png" alt="">
-                <img src="./assets/images/img4.png" alt="">
-                <img src="./assets/images/img5.png" alt="">
+            <div class="product-images">
+                <img class="product-image-item" src="./assets/images/img1.png" alt="">
+                <img class="product-image-item" src="./assets/images/img2.png" alt="">
+                <img class="product-image-item" src="./assets/images/img3.png" alt="">
+                <img class="product-image-item" src="./assets/images/img4.png" alt="">
+                <img class="product-image-item" src="./assets/images/img5.png" alt="">
             </div>
         </div>
     </section>

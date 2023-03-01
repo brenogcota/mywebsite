@@ -1,0 +1,236 @@
+:root {
+    --white: #fff;
+    --primary: #3AA39F;
+    --gray:#A2A3B1;
+    --dark: #17183B;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.page {
+    background-color: var(--white);
+}
+
+.page_header {
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 54px;
+    border-bottom: 2px solid #eee;
+}
+
+.page_logo {
+    font-family: 'Cambay';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.header_navbar--category {
+    text-decoration: none;
+    color: var(--dark);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 41px;
+}
+
+.header_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_right--item {
+    margin-left: 43px;
+    cursor: pointer;
+}
+
+.header_right--item.cart {
+    border-left: 1px solid var(--gray);
+    padding-left: 43px;
+}
+
+.main_section {
+    margin: 0 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product_name {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 56px;
+    color: var(--dark);
+    margin-bottom: 24px;
+}
+
+.breadcrumb {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--gray);
+    margin-bottom: 78px;
+}
+
+.breadcrumb .active {
+    color: #17183B;
+}
+
+.product_price-and-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.product_price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #17183B;
+}
+
+.product_rating {
+    color: var(--gray);
+}
+
+.product_description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--dark);
+    margin-bottom: 32px;
+}
+
+.product_colors {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+.product_color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #CBA5A5;
+    margin-right: 12px;
+}
+
+.product_color.pink {
+    background-color: #CBA5A5;
+}
+
+.product_color.bege {
+    background-color: #C1BDB3;
+}
+
+.product_color.blue {
+    background-color: #58737D;
+}
+
+.product_color.gray {
+    background-color:  #545454;;
+}
+
+.product_quantity-selector {
+    border: 1px solid var(--gray);
+    padding: 6px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 160px;
+    margin-right: 26px;
+}
+
+.product_quantity-selector input, .product_quantity-selector input:focus {
+    border: none;
+    outline: none;
+    width: 26px;
+}
+
+.product_buyarea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.product_buy-button {
+    background-color: var(--primary);
+    border-radius: 4px;
+    height: 44px;
+    width: 164px;
+    padding: 14px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.product_buy-button:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.product_trial {
+    margin-bottom: 32px;
+}
+
+.product_wishlist {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product_add-to-wishlist {
+    background: transparent;
+    color: var(--primary);
+    border: none;
+    margin-left: 16px;
+    cursor: pointer;
+}
+
+.container_left {
+    width: 440px;
+}
+
+.container_right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.product-images {
+    margin-left: auto;
+    height: 616px;
+}
+
+.product_images-count {
+    font-size: 32px;
+    line-height: 44px;  
+}
+
+.product_images-count strong {
+    color: var(--dark);
+}
+
+.product_images-count span {
+    color: var(--gray);
+}
+
+.page_back {
+    margin-bottom: 34px;
+}
