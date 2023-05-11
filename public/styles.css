@@ -1,0 +1,76 @@
+:root {
+    --white: #fff;
+    --primary: #c6c5fe;
+    --gray:#A2A3B1;
+    --dark: #17183B;
+}
+
+body {
+    font-family: Inter, -apple-system, "system-ui", "Helvetica Neue", Arial, sans-serif;
+    height: 100vh;
+}
+
+header {
+    padding: 1.2rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    max-width: 1200px;
+}
+
+main {
+    padding: 1.2rem;
+    min-height: 60vh;
+}
+
+main section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+main section p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+main section div img {
+    border-radius: 50%;
+    max-width: 220px;
+    height: 220px;
+}
+
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem;
+}
+
+footer div strong {
+    font-size: 1.8rem;
+}
+
+footer div button {
+    background: #FFEBD4;
+    outline: none;
+    border: none;
+    padding: 0.8rem;
+    border-radius: .4rem;
+    color: #743435;
+    font-weight: 600;
+}
+
+footer div button:hover {
+    cursor: pointer;
+}
+
+footer p {
+    text-align: center;
+}
