@@ -74,3 +74,11 @@ footer div button:hover {
 footer p {
     text-align: center;
 }
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-size: 100%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
