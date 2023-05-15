@@ -33,5 +33,28 @@ jobs:
           echo "::set-output name=bucket_name::$BUCKET_NAME"
           aws s3api create-bucket --bucket $BUCKET_NAME
 
+      - name: Configure bucket for static website hosting
+        run: |
+          aws s3 website s3://${{ steps.create_bucket.outputs.bucket_name }} --index-document
+
+      - name: Set bucket policy for public access
+        run: |
+          aws s3api put-bucket-policy --bucket ${{ steps.create_bucket.outputs.bucket_name }} --policy '{
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Sid": "PublicReadGetObject",
+                  "Effect": "Allow",
+                  "Principal": "*",
+                  "Action": "s3:GetObject",
+                  "Resource": "arn:aws:s3:::${{ steps.create_bucket.outputs.bucket_name }}/*"
+                }
+              ]
+            }'
+
       - name: Deploy to S3
         run: aws s3 sync ./ s3://${{ steps.create_bucket.outputs.bucket_name }} --delete
+      
+      - name: Configure bucket public access settings
+        run: |
+          aws s3api put-public-access-block --bucket ${{ steps.create_bucket.outputs.bucket_name }} --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
