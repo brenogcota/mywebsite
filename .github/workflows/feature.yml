@@ -30,7 +30,7 @@ jobs:
         run: |
           BRANCH_NAME=$(echo "${{ github.ref }}" | awk -F'/' '{print $3}')
           BUCKET_NAME="branch-${BRANCH_NAME}-example-com"
-          aws s3api create-bucket --bucket $BUCKET_NAME --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
+          aws s3api create-bucket --bucket $BUCKET_NAME
 
       - name: Deploy to S3
         run: aws s3 sync ./ s3://${{ steps.create_bucket.outputs.BUCKET_NAME }} --delete
