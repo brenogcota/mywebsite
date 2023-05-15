@@ -35,7 +35,7 @@ jobs:
 
       - name: Configure bucket for static website hosting
         run: |
-          aws s3 website s3://${{ steps.create_bucket.outputs.bucket_name }} --index-document
+          aws s3 website s3://${{ steps.create_bucket.outputs.bucket_name }} --index-document index.html
 
       - name: Set bucket policy for public access
         run: |
